@@ -4,12 +4,7 @@ Pick **any** message from your OpenCode session history and copy it to the clipb
 
 A TUI plugin for **OpenCode v2**. OpenCode's built-in copy command only grabs the last assistant reply. This plugin opens a searchable picker of every message in the session, so you can walk back through the conversation and copy the one you want.
 
-```
-  Here's the change: the redirect now happens after…         14:35 ai
-  fix the login redirect bug when the session expires        14:32 me
-  Done. I moved the check into the middleware and…      11/9 09:11 ai
-  can you also cover the logout flow?                   11/9 09:10 me
-```
+![The copy message picker, listing recent messages with time and role](https://github.com/kabeero/opencode-copy-message-v2/releases/download/v0.1.0/preview.png)
 
 Newest messages first. Your own messages (`me`) are dimmed, the model's (`ai`) are normal text, and each role gets its own theme color.
 
