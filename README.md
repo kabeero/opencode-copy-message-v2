@@ -5,10 +5,10 @@ Pick **any** message from your OpenCode session history and copy it to the clipb
 A TUI plugin for **OpenCode v2**. OpenCode's built-in copy command only grabs the last assistant reply. This plugin opens a searchable picker of every message in the session, so you can walk back through the conversation and copy the one you want.
 
 ```
-  Here's the change: the redirect now happens after…              14:35 ai
-  fix the login redirect bug when the session expires             14:32 me
-  Done. I moved the check into the middleware and…         11/9  09:11 ai
-  can you also cover the logout flow?                      11/9  09:10 me
+  Here's the change: the redirect now happens after…         14:35 ai
+  fix the login redirect bug when the session expires        14:32 me
+  Done. I moved the check into the middleware and…      11/9 09:11 ai
+  can you also cover the logout flow?                   11/9 09:10 me
 ```
 
 Newest messages first. Your own messages (`me`) are dimmed, the model's (`ai`) are normal text, and each role gets its own theme color.
@@ -41,13 +41,13 @@ To update, `git pull` inside that folder and `/reload`. To remove, delete the fo
 
 | How | What |
 | --- | --- |
-| `<leader>` then `Shift+Y` | Open the picker (default leader is `Ctrl+X`) |
+| Your leader key, then `Shift+Y` | Open the picker |
 | `/copy-message` | Open the picker from the prompt |
 | `Ctrl+P`, then "Copy message from history" | Open it from the command palette |
 
 In the picker: type to search, arrow keys to move, `Enter` to copy, `Esc` to cancel. A toast confirms the copy.
 
-OpenCode's built-in `<leader>y` still copies the last assistant message. This plugin doesn't touch it.
+OpenCode's built-in "Copy last assistant message" command is unchanged. This plugin doesn't touch it.
 
 ## Customize
 
@@ -71,7 +71,7 @@ This is a rewrite of the idea behind [`opencode-copy-message`](https://www.npmjs
 | Colors | none | per role, from the theme |
 | Clipboard | OSC 52 | `pbcopy` on local macOS, OSC 52 otherwise |
 
-**Not included.** The v1 plugin also has a transcript popup, "open transcript in `nvim`" and a mouse-capture toggle. This plugin only does the picker. OpenCode v2 already has built-in commands for copying the last reply (`<leader>y`) and exporting the session to your editor (`<leader>x`).
+**Not included.** The v1 plugin also has a transcript popup, "open transcript in `nvim`" and a mouse-capture toggle. This plugin only does the picker. OpenCode v2 already has built-in commands for copying the last reply and for exporting the session to your editor.
 
 ## Compatibility and limits
 
